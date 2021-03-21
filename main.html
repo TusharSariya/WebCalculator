@@ -10,10 +10,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css?v=1.0">
     <script type="text/javascript">
-    let numStr ="";
+    let numStr = "";
+    let numFirst, numSeccond;
+    let Operation = "";
+    let sum;
       function inputNum(inNum) {
         numStr +=inNum;
-        document.getElementById("exampleInputEmail1").value = numStr;
+        document.getElementById("inputNum").value = numStr;
+      }
+      function Operator(operation) {
+        if(Operation == "") {
+          Operation = operation;
+        }
+        else {
+          alert("already created an operator");
+        }
+        numFirst = parseInt(numStr);
+        numStr ="";
+        document.getElementById("inputNum").value = numStr;
+      }
+
+      function Compute() {
+        numSeccond = parseInt(numStr);
+        sum = numFirst + numSeccond;
+        document.getElementById("output").value = sum;
       }
     </script>
   </head>
@@ -22,7 +42,7 @@
     <div class="container">
       <form>
         <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          <input type="email" class="form-control" id="inputNum" aria-describedby="emailHelp" placeholder="">
           <small id="emailHelp" class="form-text text-muted"></small>
         </div>
       </form>
@@ -51,7 +71,7 @@
           <button type="button" class="btn btn-primary" onclick="inputNum(6);">6</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" >div</button>
+          <button type="button" class="btn btn-primary" onclick="Operator(1)">div</button>
         </div>
       </div>
       <div class="row">
@@ -65,7 +85,7 @@
           <button type="button" class="btn btn-primary" onclick="inputNum(3);">3</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary">mul</button>
+          <button type="button" class="btn btn-primary" onclick="Operator(2)">mul</button>
         </div>
       </div>
       <div class="row">
@@ -76,10 +96,10 @@
           <button type="button" class="btn btn-primary " onclick="inputNum('.');">.</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum('=');">=</button>
+          <button type="button" class="btn btn-primary" onclick="Compute()">=</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary">add</button>
+          <button type="button" class="btn btn-primary" onclick="Operator(3)">add</button>
         </div>
       </div>
       <div class="row">
@@ -89,7 +109,7 @@
       </div>
       <form>
         <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+          <input type="email" class="form-control" id="output" aria-describedby="emailHelp" placeholder="">
           <small id="emailHelp" class="form-text text-muted"></small>
         </div>
       </form>
