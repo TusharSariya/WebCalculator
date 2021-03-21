@@ -9,33 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css?v=1.0">
-    <script type="text/javascript">
-    let numStr = "";
-    let numFirst, numSeccond;
-    let Operation = "";
-    let sum;
-      function inputNum(inNum) {
-        numStr +=inNum;
-        document.getElementById("inputNum").value = numStr;
-      }
-      function Operator(operation) {
-        if(Operation == "") {
-          Operation = operation;
-        }
-        else {
-          alert("already created an operator");
-        }
-        numFirst = parseInt(numStr);
-        numStr ="";
-        document.getElementById("inputNum").value = numStr;
-      }
-
-      function Compute() {
-        numSeccond = parseInt(numStr);
-        sum = numFirst + numSeccond;
-        document.getElementById("output").value = sum;
-      }
-    </script>
+    <script src="main.js"></script>
   </head>
   <body>
     <link rel="stylesheet" href="style.css">
@@ -57,7 +31,7 @@
           <button type="button" class="btn btn-primary" onclick="inputNum(9);">9</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" >backspace</button>
+          <button type="button" class="btn btn-primary" onclick="backspace();">backspace</button>
         </div>
       </div>
       <div class="row">
@@ -71,7 +45,7 @@
           <button type="button" class="btn btn-primary" onclick="inputNum(6);">6</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="Operator(1)">div</button>
+          <button type="button" class="btn btn-primary" onclick="Operator('div')">div</button>
         </div>
       </div>
       <div class="row">
@@ -85,7 +59,7 @@
           <button type="button" class="btn btn-primary" onclick="inputNum(3);">3</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="Operator(2)">mul</button>
+          <button type="button" class="btn btn-primary" onclick="Operator('mul')">mul</button>
         </div>
       </div>
       <div class="row">
@@ -99,12 +73,12 @@
           <button type="button" class="btn btn-primary" onclick="Compute()">=</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="Operator(3)">add</button>
+          <button type="button" class="btn btn-primary" onclick="Operator('add')">add</button>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <button type="button" class="btn btn-primary">1</button>
+          <button type="button" class="btn btn-primary" onclick="Operator('sub')">sub</button>
         </div>
       </div>
       <form>
