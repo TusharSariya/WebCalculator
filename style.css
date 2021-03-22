@@ -1,3 +1,18 @@
-div[class^="col"] {
-	border: 1px blue solid;
+.nums {
+
+}
+
+.operation {
+	background: gray;
+}
+
+.body {
+	background-color: black;
+}
+
+.clearAll {
+	background: red;
+}
+.backspace {
+	background: lightcoral;
 }

@@ -8,11 +8,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="style.css?v=1.0">
     <script src="main.js"></script>
   </head>
   <body>
-    <link rel="stylesheet" href="style.css">
     <div class="container">
       <form>
         <div class="form-group">
@@ -22,63 +21,68 @@
       </form>
       <div class="row">
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(7);">7</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(7);">7</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(8);">8</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(8);">8</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(9);">9</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(9);">9</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="backspace();">backspace</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(4);">4</button>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(5);">5</button>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(6);">6</button>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary" onclick="Operator('div')">div</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block backspace" onclick="backspace();">backspace</button>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(1);">1</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(4);">4</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(2);">2</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(5);">5</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(3);">3</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(6);">6</button>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="Operator('mul')">mul</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <button type="button" class="btn btn-primary" onclick="inputNum(0);">0</button>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary " onclick="inputNum('.');">.</button>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary" onclick="Compute()">=</button>
-        </div>
-        <div class="col">
-          <button type="button" class="btn btn-primary" onclick="Operator('add')">add</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block operation" onclick="Operator('div')">div</button>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <button type="button" class="btn btn-primary" onclick="Operator('sub')">sub</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(1);">1</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(2);">2</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(3);">3</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block operation" onclick="Operator('mul')">mul</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum(0);">0</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block nums" onclick="inputNum('.');">.</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block equals" onclick="Compute()">=</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block operation" onclick="Operator('add')">add</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block clearAll" onclick="clearAll()">clear</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-primary btn-lg btn-block operation" onclick="Operator('sub')">sub</button>
         </div>
       </div>
       <form>

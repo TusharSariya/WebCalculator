@@ -2,6 +2,7 @@ let numStr = "";
 let numFirst, numSeccond;
 let Operation = "";
 let sum;
+//Boolean continueOperation = false;
 
 function inputNum(inNum) {
     numStr +=inNum;
@@ -12,7 +13,10 @@ function Operator(operation) {
         Operation = operation;
     }
     else {
-        alert("already created an operator");
+        alert("already allocated an operator");
+        //numFirst = parseFloat(numSeccond);
+        //numStr = "";
+        //Operation = operation;
     }
     numFirst = parseFloat(numStr);
     numStr ="";
@@ -24,19 +28,29 @@ function Compute() {
     if(Operation == "add") {
         sum = numFirst + numSeccond;
     }
-    if(Operator == "sub") {
+    else if(Operation == "sub") {
         sum = numFirst - numSeccond;
     }
-    if(Operator == "mul") {
+    else if(Operation == "mul") {
         sum = numFirst * numSeccond;
     }
-    if(Operator == "div") {
+    else if(Operation == "div") {
         sum = numFirst / numSeccond; 
+    }
+    else {
+        alert("invalid operator passed");
     }
     document.getElementById("output").value = sum;
 }
 
 function backspace() {
     numStr = numStr.slice(0,-1);
+    document.getElementById("inputNum").value = numStr;
+}
+
+function clearAll() {
+    numFirst = 0;
+    numSeccond = 0;
+    numStr = "";
     document.getElementById("inputNum").value = numStr;
 }
